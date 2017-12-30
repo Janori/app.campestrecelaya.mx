@@ -12,6 +12,7 @@ $font-path: "../assets/fonts";
 $app-direction: ltr;
 
 
+
 @import "ionic.globals";
 
 
@@ -38,7 +39,12 @@ $colors: (
   secondary:  #32db64,
   danger:     #f53d3d,
   light:      #f4f4f4,
-  dark:       #222
+  dark:       #222,
+  white:      #fff,
+  lightO:     #FFAB04,
+  lightG:     #33691e,
+  darkO:      #875a00,
+  darkG:      #1a3111,
 );
 
 
@@ -86,3 +92,8 @@ $colors: (
 
 @import "roboto";
 @import "noto-sans";
+
+
+// Font Awesome
+$fa-font-path: $font-path;
+@import "font-awesome";
