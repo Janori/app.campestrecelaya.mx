@@ -1,0 +1,47 @@
+page-pwd-reset {
+
+  .content{
+    padding: 0px;
+    margin: 0px;
+    background: rgba(0,0,0,0.65);
+    div{
+      width: 90%;
+      height: 75%;
+      margin-left: 5%;
+      margin-top: 10%;
+      background: white;
+
+      .title{
+        background: color($colors, lightO);
+        margin-left: -6%;
+        margin-top: -12%;
+        height: 12%;
+        color: white;
+        width: 112%;
+        font-size: 2em;
+        padding-top: 1.5%;
+        padding-left: 5%;
+      }
+    }
+  }
+
+  p{
+    color: #888888;
+  }
+
+  .item-inner, .input-wrapper {
+     padding: 0px!important;
+     margin: 0px!important;
+  }
+
+  .button-action{
+    float: right;
+  }
+  .button-send{
+    margin-left: 50%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    transform: translateX(-50%);
+  }
+
+}

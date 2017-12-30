@@ -1,0 +1,47 @@
+<!--
+  Generated template for the LoginPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<!--
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>login</ion-title>
+  </ion-navbar>
+
+</ion-header>
+-->
+
+<ion-content>
+
+  <div class="right-green"></div>
+  <div class="left-green"></div>
+
+  <div class="right-yellow"></div>
+  <div class="left-yellow"></div>
+
+  <img src="assets/imgs/logo.png">
+
+  <ion-list>
+    <ion-item>
+      <ion-label floating>Correo electronico de socio</ion-label>
+      <ion-input [(ngModel)]="user" type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Contraseña</ion-label>
+      <ion-input [(ngModel)]="pwd" type="password"></ion-input>
+    </ion-item>
+
+  </ion-list>
+
+  <button class="button-pagraph" (click)="resetPwd()" ion-button color="dark" clear>
+    <p >¿Olvidaste tu correo, contraseña o no estás registrado?</p>
+  </button>
+  <button class="button-login" (click)="login()" ion-button strong color="lightO">INGRESAR</button>
+
+
+
+</ion-content>
