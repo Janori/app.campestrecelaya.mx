@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams, ToastController, ModalController } from 'ionic-angular';
-import { HomePage, PwdResetPage } from '../';
+import { MenuPage, PwdResetPage } from '../';
 /**
  * Generated class for the LoginPage page.
  *
@@ -36,7 +36,7 @@ export class LoginPage {
     if(!this.user || !this.pwd)
       this.loginFailed('Ingresa tu usuario y contraseña.');
     else if(this.user == 'admin' && this.pwd == 'secret'){
-      this.navCtrl.setRoot(HomePage);
+      this.navCtrl.setRoot(MenuPage);
     }else this.loginFailed('Acceso denegado. Usuario o contraseña incorrecta.');
   }
 

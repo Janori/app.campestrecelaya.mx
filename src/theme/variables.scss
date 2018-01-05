@@ -24,7 +24,7 @@ $app-direction: ltr;
 // http://ionicframework.com/docs/theming/overriding-ionic-variables/
 
 
-
+$menu-width: 200px;
 
 // Named Color Variables
 // --------------------------------------------------
@@ -45,6 +45,7 @@ $colors: (
   lightG:     #33691e,
   darkO:      #875a00,
   darkG:      #1a3111,
+  transparent:rgba(0,0,0,0),
 );
 
 

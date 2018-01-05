@@ -14,34 +14,38 @@
 </ion-header>
 -->
 
-<ion-content>
+<ion-content no-bounce>
+  <div ion-fixed class="main">
+    <div class="shapes">
 
-  <div class="right-green"></div>
-  <div class="left-green"></div>
+      <div class="right-green"></div>
+      <div class="left-green"></div>
 
-  <div class="right-yellow"></div>
-  <div class="left-yellow"></div>
+      <div class="right-yellow"></div>
+      <div class="left-yellow"></div>
+    </div>
+    <img src="assets/imgs/logo.png">
 
-  <img src="assets/imgs/logo.png">
+    <form (ngSubmit)="login()">
+      <ion-item>
+        <ion-label floating>Correo electronico de socio</ion-label>
+        <ion-input type="text" [(ngModel)]="user" name="user"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Contraseña</ion-label>
+        <ion-input [(ngModel)]="pwd" type="password" name="password"></ion-input>
+      </ion-item>
 
-  <ion-list>
-    <ion-item>
-      <ion-label floating>Correo electronico de socio</ion-label>
-      <ion-input [(ngModel)]="user" type="text"></ion-input>
-    </ion-item>
+      <button  type="button" class="button-pagraph" (click)="resetPwd()" ion-button color="dark" clear>
+        <p >¿Olvidaste tu correo, contraseña o no estás registrado?</p>
+      </button>
 
-    <ion-item>
-      <ion-label floating>Contraseña</ion-label>
-      <ion-input [(ngModel)]="pwd" type="password"></ion-input>
-    </ion-item>
+      <button type="submit" class="button-login" ion-button strong color="lightO">INGRESAR</button>
+    </form>
 
-  </ion-list>
 
-  <button class="button-pagraph" (click)="resetPwd()" ion-button color="dark" clear>
-    <p >¿Olvidaste tu correo, contraseña o no estás registrado?</p>
-  </button>
-  <button class="button-login" (click)="login()" ion-button strong color="lightO">INGRESAR</button>
 
+  </div>
 
 
 </ion-content>

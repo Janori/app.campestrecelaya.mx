@@ -5,7 +5,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
-import { HomePage, LoginPage, PwdResetPage } from '../pages/index';
+import { HomePage, LoginPage, PwdResetPage, MenuPage } from '../pages/index';
 
 import { FaIconComponent } from '../components/fa-icon/fa-icon.component';
 
@@ -15,6 +15,7 @@ import { FaIconComponent } from '../components/fa-icon/fa-icon.component';
     HomePage,
     LoginPage,
     PwdResetPage,
+    MenuPage,
     FaIconComponent
   ],
   imports: [
@@ -27,6 +28,7 @@ import { FaIconComponent } from '../components/fa-icon/fa-icon.component';
     HomePage,
     LoginPage,
     PwdResetPage,
+    MenuPage,
   ],
   providers: [
     StatusBar,

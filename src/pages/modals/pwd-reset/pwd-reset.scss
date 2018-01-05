@@ -10,16 +10,18 @@ page-pwd-reset {
       margin-left: 5%;
       margin-top: 10%;
       background: white;
+      padding-top: 4%;
 
       .title{
+        position: absolute;
         background: color($colors, lightO);
         margin-left: -6%;
-        margin-top: -12%;
+        margin-top: -19%;
         height: 12%;
         color: white;
         width: 112%;
         font-size: 2em;
-        padding-top: 1.5%;
+        padding-top: 3%;
         padding-left: 5%;
       }
     }

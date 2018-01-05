@@ -1,7 +1,18 @@
 page-login {
 
+  [noScroll] {
+    overflow: hidden;
+  }
+
+  .main{
+    height: 100%;
+    background: transparent;
+  }
+
+
   img {
     width: 70%;
+    margin-top: 15px;
     margin-left: 15%;
   }
 
