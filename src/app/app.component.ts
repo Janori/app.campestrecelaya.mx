@@ -8,7 +8,7 @@ import { LoginPage, MenuPage, ProfilePage, SwimmingPoolPage } from '../pages/ind
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = SwimmingPoolPage;
+  rootPage:any = MenuPage;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {

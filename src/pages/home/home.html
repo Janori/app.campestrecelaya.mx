@@ -13,5 +13,13 @@
 
 
 <ion-content padding>
-  <button ion-button menuToggle>Toggle Menu</button>
+    <ion-card *ngFor="let index of [1,2,3,4]">
+        <img src="assets/imgs/card-holder.png"/>
+        <ion-card-content>
+            <ion-card-title>Torneo de golf Express</ion-card-title>
+            <p>
+                Se llevará a cabo el día 22 de diciembre en las inmediaciones del club, registro en recepeción.
+            </p>
+        </ion-card-content>
+    </ion-card>
 </ion-content>
