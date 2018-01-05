@@ -1,0 +1,45 @@
+$yellow: #ffab04;
+$brown: #875a00;
+$dark-green: #1a3111;
+$green: #33691e;
+
+
+page-profile {
+    .scroll-content {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        height: 100%;
+
+        ion-card {
+
+            ion-card-header {
+                background-color: $yellow !important;
+                color: #fff;
+            }
+
+            ion-card-content {
+                padding-top: 15px !important;
+                text-align: center;
+                .list-ios {
+                    .item-block {
+                        &:first-child,
+                        &:last-child {
+                            border: none !important;
+                        }
+                        .item-inner {
+                            border-bottom: .55px solid $yellow !important;
+                        }
+                    }
+                }
+
+                .submit-button {
+                    background-color: $yellow !important;
+                    color: #000;
+                    border-radius: 0px;
+                    margin: 25px 0px;
+                }
+            }
+        }
+    }
+}
