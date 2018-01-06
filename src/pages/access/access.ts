@@ -13,12 +13,18 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'access.html',
 })
 export class AccessPage {
+  qrData = null;
+  createdCode = null;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.createdCode = "hola putini :)";
+  }
+  createCode() {
+      this.createdCode = this.qrData;
+
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad AccessPage');
   }
 
 }

@@ -7,6 +7,8 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 import { HomePage, LoginPage, PwdResetPage, MenuPage, ProfilePage, SwimmingPoolPage, AccessPage } from '../pages/index';
 
+import { NgxQRCodeModule } from 'ngx-qrcode2';
+
 import { FaIconComponent, PageDecoratorComponent } from '../components/index';
 
 @NgModule({
@@ -24,6 +26,7 @@ import { FaIconComponent, PageDecoratorComponent } from '../components/index';
   ],
   imports: [
     BrowserModule,
+    NgxQRCodeModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
