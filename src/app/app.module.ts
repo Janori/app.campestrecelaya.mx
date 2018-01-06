@@ -7,7 +7,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 import { HomePage, LoginPage, PwdResetPage, MenuPage, ProfilePage, SwimmingPoolPage, AccessPage } from '../pages/index';
 
-import { FaIconComponent } from '../components/fa-icon/fa-icon.component';
+import { FaIconComponent, PageDecoratorComponent } from '../components/index';
 
 @NgModule({
   declarations: [
@@ -20,6 +20,7 @@ import { FaIconComponent } from '../components/fa-icon/fa-icon.component';
     ProfilePage,
     SwimmingPoolPage,
     AccessPage,
+    PageDecoratorComponent,
   ],
   imports: [
     BrowserModule,
