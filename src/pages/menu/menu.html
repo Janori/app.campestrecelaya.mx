@@ -14,6 +14,11 @@
         <div class="right-yellow"></div>
         <div class="left-yellow"></div>
       </div>
+
+      <div class="user-containter">
+          <p>{{ user.name }}<br/>
+          <small>{{ user.email }}</small></p>
+      </div>
     </div>
 
 
@@ -23,13 +28,11 @@
         <span>Inicio</span>
       </button>
 
-      <hr>
       <button (click)="rootPage = accessPage" [ngClass]="{'active': rootPage == accessPage}" clear ion-button block>
         <fa-icon class="center-l" name="lock" size="2x"></fa-icon>
         <span>Ingreso al club</span>
       </button>
-      
-      <hr>
+
       <button (click)="rootPage = swimmingPoolPage" [ngClass]="{'active': rootPage == swimmingPoolPage}" clear ion-button block>
         <fa-icon class="center-t" name="thermometer-three-quarters" size="2x"></fa-icon>
         <span>Alberca</span>
@@ -41,7 +44,6 @@
         <span>Accesos</span>
       </button> -->
 
-      <hr>
       <button (click)="rootPage = profilePage" [ngClass]="{'active': rootPage == profilePage}" clear ion-button block>
         <fa-icon class="center-l" name="user" size="2x"></fa-icon>
         <span>Perfil</span>

@@ -14,6 +14,11 @@ export class MenuPage {
   swimmingPoolPage = SwimmingPoolPage;
   profilePage = ProfilePage;
 
+  public user: any = {
+      name: 'Felipillo Suárez',
+      email: 'admin@janori.com'
+  };
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
