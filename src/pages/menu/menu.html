@@ -25,17 +25,18 @@
     <ion-list>
       <button menuClose (click)="rootPage = homePage" [ngClass]="{'active': (rootPage == homePage)}" clear ion-button block>
         <fa-icon class="center-h"  name="home" size="2x"></fa-icon>
-        Inicio
+        <span>Inicio</span>
       </button>
 
       <button menuClose (click)="rootPage = accessPage" [ngClass]="{'active': rootPage == accessPage}" clear ion-button block>
         <fa-icon class="center-l" name="lock" size="2x"></fa-icon>
-        Ingreso al club
+        <span>Ingreso al club</span>
+
       </button>
 
       <button menuClose (click)="rootPage = swimmingPoolPage" [ngClass]="{'active': rootPage == swimmingPoolPage}" clear ion-button block>
         <fa-icon class="center-t" name="thermometer-three-quarters" size="2x"></fa-icon>
-        Alberca
+        <span>Alberca</span>
       </button>
 
       <!-- <hr>
@@ -46,7 +47,7 @@
 
       <button menuClose (click)="rootPage = profilePage" [ngClass]="{'active': rootPage == profilePage}" clear ion-button block>
         <fa-icon class="center-l" name="user" size="2x"></fa-icon>
-        Perfil
+        <span>Perfil</span>
       </button>
     </ion-list>
   </ion-content>

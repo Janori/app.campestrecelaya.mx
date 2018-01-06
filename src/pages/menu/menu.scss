@@ -48,6 +48,11 @@ page-menu {
             height: auto;
             margin-right: 15px;
         }
+        span{
+            position: absolute;
+            bottom: 0;
+            transform: translateY(-100%);
+        }
       }
     }
     .active{
