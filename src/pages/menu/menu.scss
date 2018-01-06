@@ -1,8 +1,24 @@
 page-menu {
+
+  .decorator{
+    height: 25%;
+    widows: 100%;
+    position: relative;
+    overflow: hidden;
+    background: #d0b785;
+
+    img{
+      position: absolute;
+      left: 22%;
+      top: 5%;
+      width: 50%;
+    }
+  }
+
   .left-menu{
-    background: color($colors, lightO);
+    //background: color($colors, lightO);
     button{
-      color: white;
+      color: #555;
       //padding: 5px 10px;
       font-size: 1.3em;
       width: 100%;
@@ -29,5 +45,85 @@ page-menu {
         //transform: translateY(25%);
       }
     }
+    .active{
+      color: color($colors, lightO);
+    }
+
+    .shapes{
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top:0; left: 0;
+
+
+      .left-yellow{
+        background: color($colors,darkO);
+        bottom: 0px;
+        left: 0px;
+        position: absolute;
+        width: 65%;
+        transform: translateX(-45%)
+                   translateY(57%)
+                   rotateZ(40deg);
+      }
+      .left-yellow:before{
+        content: "";
+        display: block;
+        padding-top: 100%;
+      }
+
+
+      .right-yellow{
+        background: color($colors,lightO);
+        bottom: 0px;
+        left: 0px;
+        position: absolute;
+        width: 80%;
+        transform: translateX(-45%)
+                   translateY(57%)
+                   rotateZ(40deg);
+      }
+      .right-yellow:before{
+        content: "";
+        display: block;
+        padding-top: 100%;
+      }
+    }
+
+    .left-green{
+      background: color($colors,darkG);
+      bottom: 0px;
+      right: 0px;
+      position: absolute;
+      width: 76%;
+      transform: translateX(56%)
+                 translateY(50%)
+                 rotateZ(43deg);
+    }
+    .left-green:before{
+      content: "";
+      display: block;
+      padding-top: 100%;
+    }
+
+
+    .right-green{
+      background: color($colors,lightG);
+      bottom: 0px;
+      right: 0px;
+      position: absolute;
+      width: 91%;
+      transform: translateX(56%)
+                 translateY(50%)
+                 rotateZ(43deg);
+    }
+    .right-green:before{
+      content: "";
+      display: block;
+      padding-top: 100%;
+    }
+
   }
+
+
 }

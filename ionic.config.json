@@ -2,5 +2,7 @@
   "name": "campestre",
   "app_id": "9bebf6ca",
   "type": "ionic-angular",
-  "integrations": {}
+  "integrations": {
+    "cordova": {}
+  }
 }

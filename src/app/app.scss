@@ -14,3 +14,77 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+
+.shapes{
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top:0; left: 0;
+
+  .left-yellow{
+    background: color($colors,darkO);
+    bottom: 0px;
+    left: 0px;
+    position: absolute;
+    width: 40%;
+    transform: translateX(-50%)
+               translateY(50%)
+               rotateZ(45deg);
+  }
+  .left-yellow:before{
+    content: "";
+    display: block;
+    padding-top: 100%;
+  }
+
+
+  .right-yellow{
+    background: color($colors,lightO);
+    bottom: 0px;
+    left: 0px;
+    position: absolute;
+    width: 45%;
+    transform: translateX(-50%)
+               translateY(50%)
+               rotateZ(45deg);
+  }
+  .right-yellow:before{
+    content: "";
+    display: block;
+    padding-top: 100%;
+  }
+
+  .left-green{
+    background: color($colors,darkG);
+    bottom: 0px;
+    right: 0px;
+    position: absolute;
+    width: 40%;
+    transform: translateX(50%)
+               translateY(-50%)
+               rotateZ(45deg);
+  }
+  .left-green:before{
+    content: "";
+    display: block;
+    padding-top: 100%;
+  }
+
+
+  .right-green{
+    background: color($colors,lightG);
+    bottom: 0px;
+    right: 0px;
+    position: absolute;
+    width: 45%;
+    transform: translateX(50%)
+               translateY(-50%)
+               rotateZ(45deg);
+  }
+  .right-green:before{
+    content: "";
+    display: block;
+    padding-top: 100%;
+  }
+}

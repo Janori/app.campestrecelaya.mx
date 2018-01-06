@@ -1,26 +1,50 @@
 <ion-menu [content]="mycontent">
+
+
+
   <ion-content class="left-menu">
+
+    <div class="decorator">
+      <img src="assets/imgs/logo.png">
+      <div class="shapes">
+
+        <div class="right-green"></div>
+        <div class="left-green"></div>
+
+        <div class="right-yellow"></div>
+        <div class="left-yellow"></div>
+      </div>
+    </div>
+
+
     <ion-list>
-      <button clear ion-button block>
+      <button (click)="rootPage = homePage" [ngClass]="{'active': (rootPage == homePage)}" clear ion-button block>
         <fa-icon class="center-h"  name="home" size="2x"></fa-icon>
         <span>Inicio</span>
       </button>
+
       <hr>
-      <button clear ion-button block>
+      <button (click)="rootPage = accessPage" [ngClass]="{'active': rootPage == accessPage}" clear ion-button block>
+        <fa-icon class="center-l" name="lock" size="2x"></fa-icon>
+        <span>Ingreso al club</span>
+      </button>
+      
+      <hr>
+      <button (click)="rootPage = swimmingPoolPage" [ngClass]="{'active': rootPage == swimmingPoolPage}" clear ion-button block>
         <fa-icon class="center-t" name="thermometer-three-quarters" size="2x"></fa-icon>
         <span>Alberca</span>
       </button>
 
-      <hr>
-      <button clear ion-button block>
+      <!-- <hr>
+      <button (click)="rootPage = a"  clear ion-button block>
         <fa-icon name="users" size="2x"></fa-icon>
         <span>Accesos</span>
-      </button>
+      </button> -->
 
       <hr>
-      <button clear ion-button block>
-        <fa-icon class="center-l" name="lock" size="2x"></fa-icon>
-        <span>Ingreso al club</span>
+      <button (click)="rootPage = profilePage" [ngClass]="{'active': rootPage == profilePage}" clear ion-button block>
+        <fa-icon class="center-l" name="user" size="2x"></fa-icon>
+        <span>Perfil</span>
       </button>
     </ion-list>
   </ion-content>
