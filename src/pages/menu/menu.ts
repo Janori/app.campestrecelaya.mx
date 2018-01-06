@@ -15,8 +15,8 @@ export class MenuPage {
   profilePage = ProfilePage;
 
   public user: any = {
-      name: 'Felipillo Suárez',
-      email: 'admin@janori.com'
+      name: 'Administrador Campestre',
+      email: 'admin@campestrecelaya.mx'
   };
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
