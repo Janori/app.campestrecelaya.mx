@@ -25,28 +25,28 @@
     <ion-list>
       <button (click)="rootPage = homePage" [ngClass]="{'active': (rootPage == homePage)}" clear ion-button block>
         <fa-icon class="center-h"  name="home" size="2x"></fa-icon>
-        <span>Inicio</span>
+        Inicio
       </button>
 
       <button (click)="rootPage = accessPage" [ngClass]="{'active': rootPage == accessPage}" clear ion-button block>
         <fa-icon class="center-l" name="lock" size="2x"></fa-icon>
-        <span>Ingreso al club</span>
+        Ingreso al club
       </button>
 
       <button (click)="rootPage = swimmingPoolPage" [ngClass]="{'active': rootPage == swimmingPoolPage}" clear ion-button block>
         <fa-icon class="center-t" name="thermometer-three-quarters" size="2x"></fa-icon>
-        <span>Alberca</span>
+        Alberca
       </button>
 
       <!-- <hr>
       <button (click)="rootPage = a"  clear ion-button block>
         <fa-icon name="users" size="2x"></fa-icon>
-        <span>Accesos</span>
+        Accesos
       </button> -->
 
       <button (click)="rootPage = profilePage" [ngClass]="{'active': rootPage == profilePage}" clear ion-button block>
         <fa-icon class="center-l" name="user" size="2x"></fa-icon>
-        <span>Perfil</span>
+        Perfil
       </button>
     </ion-list>
   </ion-content>
