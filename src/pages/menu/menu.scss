@@ -37,19 +37,17 @@ page-menu {
         transform-origin: center;
         transform: translateX(8px);
       }
-      fa-icon{
-        position: absolute;
-        left: 5px;
-      }
-      span{
-        //position: absolute;
-        margin-left: 5px;
-        span {
-            position: absolute;
-            left: 25%;
-            top: 22.5px !important;
+
+      span.button-inner {
+        display: block !important;
+        text-align: left;
+        margin: 15px 0;
+        // line-height: 65px;
+        fa-icon {
+            width: 32px !important;
+            height: auto;
+            margin-right: 15px;
         }
-        //transform: translateY(25%);
       }
     }
     .active{
