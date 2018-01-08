@@ -21,7 +21,13 @@
   <ion-card *ngIf="createdCode">
     <ngx-qrcode [qrc-value]="createdCode"></ngx-qrcode>
     <ion-card-content>
-      <p>Value: {{ createdCode }}</p>
+      <button [disabled]="isUpdating" (click)="updateCode()" ion-button block color="lightO">
+        <div *ngIf="isUpdating">
+          <fa-icon name="spinner" class="fa-spin"></fa-icon>
+        </div>
+        Actualizar
+      </button>
+      <!-- <p>{{ otro }}</p> -->
     </ion-card-content>
   </ion-card>
 </ion-content>

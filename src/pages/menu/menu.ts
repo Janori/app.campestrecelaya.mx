@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams } from 'ionic-angular';
 
 import { LoginPage, HomePage, AccessPage, SwimmingPoolPage, ProfilePage } from '../../pages/index';
 
@@ -13,6 +13,7 @@ export class MenuPage {
   accessPage = AccessPage;
   swimmingPoolPage = SwimmingPoolPage;
   profilePage = ProfilePage;
+  loginPage = LoginPage;
 
   public user: any = {
       name: 'Administrador Campestre',
