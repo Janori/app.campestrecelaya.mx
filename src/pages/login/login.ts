@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams, ToastController, ModalController } from 'ionic-angular';
 import { MenuPage, PwdResetPage } from '../';
+import { AuthProvider } from '../../providers/index';
 /**
  * Generated class for the LoginPage page.
  *
@@ -19,7 +20,8 @@ export class LoginPage {
   constructor(public navCtrl: NavController,
               public navParams: NavParams,
               public modalCtrl: ModalController,
-              private toastCtrl: ToastController) {
+              private toastCtrl: ToastController,
+              private authProvider:AuthProvider) {
 
   }
 
@@ -33,11 +35,28 @@ export class LoginPage {
   }
 
   login(){
+    //this.navCtrl.setRoot(MenuPage);
     if(!this.user || !this.pwd)
       this.loginFailed('Ingresa tu usuario y contraseña.');
-    else if(this.user == 'admin' && this.pwd == 'secret'){
+    else{
+      this.authProvider.authenticate(this.user, this.pwd).subscribe(x=>{
+        let data = x.json();
+        localStorage.setItem("token", data.token);
+        localStorage.setItem("user", JSON.stringify(data.user));
+        console.log(data);
+        if(data.status == false){
+          this.loginFailed('Acceso denegado. Usuario o contraseña incorrecta.')
+        }else{
+
+          this.navCtrl.setRoot(MenuPage);
+        }
+      }, error=>{
+        this.loginFailed('Ocurrió un problema al conectar con el servidor, intente de nuevo más tarde.');
+      });
+    }
+    /*else if(this.user == 'admin' && this.pwd == 'secret'){
       this.navCtrl.setRoot(MenuPage);
-    }else this.loginFailed('Acceso denegado. Usuario o contraseña incorrecta.');
+    }else this.loginFailed('Acceso denegado. Usuario o contraseña incorrecta.');*/
   }
 
 

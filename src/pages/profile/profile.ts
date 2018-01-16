@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-import { ToastController } from 'ionic-angular';
-
+import { ToastController, AlertController } from 'ionic-angular';
+import { LoginPage } from '../login/login';
 
 /**
  * Generated class for the ProfilePage page.
@@ -15,10 +15,12 @@ import { ToastController } from 'ionic-angular';
   templateUrl: 'profile.html',
 })
 export class ProfilePage {
+
     constructor(
       public navCtrl: NavController,
       public navParams: NavParams,
-      public toastCtrl: ToastController) {
+      public toastCtrl: ToastController,
+      public alertCtrl: AlertController) {
     }
 
     ionViewDidLoad() {
@@ -31,6 +33,25 @@ export class ProfilePage {
             duration: 3000
         });
         toast.present();
+    }
+
+    logOut(){
+      let confirm = this.alertCtrl.create({
+          title: 'Cerrar sesón',
+          message: '¿Estás seguro de que quieres cerrar sesión?',
+          buttons: [
+            {
+              text: 'Si',
+              handler: () => {
+                this.navCtrl.setRoot(LoginPage);
+              }
+            },
+            {
+              text: 'No',
+            }
+          ]
+        });
+        confirm.present();
     }
 
 }

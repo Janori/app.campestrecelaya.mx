@@ -34,12 +34,14 @@ export class AccessPage {
   }
 
   updateCode(first:boolean = false) {
+    let s = this.encrypt("hola"); //[Log] encrypted – "121-10f-13b-f9-68"
+    console.log("encrypted", s);
     let id = 1;
     let date = new Date();
     let tDate = new DatePipe("en-US");// new DatePipe('yyyy-MM-ddTHH:mm:ss');
     //let tDate = DatePipe.prototype.transform('yyyy-MM-ddTHH:mm:ss');
     //var tDate = new DatePipe();
-    let code = `:qr:${id}.${tDate.transform(date, 'yyyy-MM-ddTHH:mm:ss')}`;
+    let code = `${id}.${tDate.transform(date, 'yyyy-MM-ddTHH:mm:ss')}`;
 
     console.log(code);
 
@@ -49,9 +51,9 @@ export class AccessPage {
       timer.subscribe(t=>{
         console.log('si');
         this.isUpdating = false;
-        this.createdCode = this.encrypt(code);
+        this.createdCode = ':qr:' + this.encrypt(code);
       });
-    }else this.createdCode = this.encrypt(code);
+    }else this.createdCode = ':qr:' + this.encrypt(code);
 
 
   }
@@ -79,6 +81,7 @@ export class AccessPage {
     }
 
     sb += word.substring(0,1);
+    console.log(sb);
 
     var ba = "";
     for(let s of sb){
