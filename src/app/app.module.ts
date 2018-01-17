@@ -12,6 +12,7 @@ import { NgxQRCodeModule } from 'ngx-qrcode2';
 
 import { FaIconComponent, PageDecoratorComponent } from '../components/index';
 import { AuthProvider } from '../providers/auth/auth';
+import { ApiProvider } from '../providers/api/api';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { AuthProvider } from '../providers/auth/auth';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    AuthProvider
+    AuthProvider,
+    ApiProvider
   ]
 })
 export class AppModule {}

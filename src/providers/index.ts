@@ -1,2 +1,3 @@
 export * from './auth/auth';
-export * from './Provider';
+export * from './api/api';
+export * from './provider';

@@ -1,6 +1,6 @@
 import { Http } from '@angular/http';
 import { Injectable } from '@angular/core';
-import { Provider } from '../Provider';
+import { Provider } from '../provider';
 
 /*
   Generated class for the AuthProvider provider.
@@ -10,17 +10,15 @@ import { Provider } from '../Provider';
 */
 @Injectable()
 export class AuthProvider extends Provider{
-  url = '/authenticate';
+    constructor(public http: Http) {
+        super();
+    }
 
-  constructor(public http: Http) {
-    super();
-  }
-
-  public authenticate(user:string, pwd:string){
-    return this.http.post(this.MAIN_URL + this.url, {
-      username: user,
-      password: pwd
-    });
-  }
+    public authenticate(user:string, pwd:string){
+        return this.http.post(this.getApiRoute('authenticate'), {
+          username: user,
+          password: pwd
+        });
+    }
 
 }
