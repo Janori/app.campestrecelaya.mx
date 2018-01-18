@@ -2,6 +2,7 @@
 // import { Injectable } from '@angular/core';
 
 export class Provider {
+    MAIN_URL:string = 'http://system.campestrecelaya.mx/api';
     private url: string = 'http://system.campestrecelaya.mx/api/';
     private version: string = 'v1/';
 

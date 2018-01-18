@@ -15,12 +15,12 @@
   <page-decorator></page-decorator>
 </ion-content>
 <ion-content padding>
-    <ion-card *ngFor="let index of [1,2,3,4]">
-        <img src="assets/imgs/card-holder.png"/>
+    <ion-card *ngFor="let new of news">
+        <img [src]="new.url"/>
         <ion-card-content>
-            <ion-card-title>Torneo de golf Express</ion-card-title>
+            <ion-card-title>{{ new.title }}</ion-card-title>
             <p>
-                Se llevará a cabo el día 22 de diciembre en las inmediaciones del club, registro en recepeción.
+                {{ new.description }}
             </p>
         </ion-card-content>
     </ion-card>
